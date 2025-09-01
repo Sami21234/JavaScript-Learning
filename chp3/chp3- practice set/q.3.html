@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3 of chp3</title>
+</head>
+
+<body>
+    <script>
+        // Question 3
+
+        // Write a program to print "try again" until the user enters the correct number
+
+        console.log("Question 3 of the practice set chp3");
+
+        let correctNumber = 7;
+        let UserInput;
+
+        do {
+            UserInput = prompt("Enter the correct number: ");
+            if (parseInt(UserInput) !== correctNumber) {
+                console.log("Try Again");
+            }
+        } while (parseInt(UserInput) !== correctNumber);
+
+        alert("Correct number enterd!");
+    </script>
+</body>
+
+</html>
+
+<!-- we are using the html file because the prompt function is not supported in the node.js because it is buit in the browser environment -->
