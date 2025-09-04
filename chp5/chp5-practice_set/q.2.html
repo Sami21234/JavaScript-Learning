@@ -1,0 +1,38 @@
+<!-- // Question 2
+
+// Keep adding numbers to the array of Question 1 until 0 is added to the array -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+
+<body>
+    <script>
+
+        let arr = [];                // Empty array
+        while (true) {
+
+            let input = prompt("Enter a number (enter 0 to stop) :");
+            let num;
+            num = Number(input);       // converts the string into the array
+            arr.push(num)
+            if (num === 0) {
+
+                break;      // stop the loop when user hits the 0 
+            }
+
+        }
+
+        console.log("Your numbers are :", arr);
+
+
+
+    </script>
+</body>
+
+</html>
