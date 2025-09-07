@@ -1,0 +1,35 @@
+<!-- Question 2 -->
+
+<!-- In Q.1 use confirm to ask the user if he wants to see the prompt Again (Use try again)-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+
+<body>
+    <script>
+        let runAgain = true;
+
+        while (runAgain) {
+            let age = prompt("Enter your age: ");
+            age = Number(age);
+
+            if (age >= 18) {
+                alert("You can Drive!")
+            }
+            else {
+                alert("You can't Drive, Have some milk");
+            }
+            runAgain = confirm("Do you want to enter the age Again?");
+        }
+
+
+    </script>
+</body>
+
+</html>

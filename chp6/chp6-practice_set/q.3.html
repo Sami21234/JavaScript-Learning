@@ -1,0 +1,33 @@
+<!-- Question 3 -->
+
+<!-- In the previous question, use console error to log the error if the age entered is negative -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+<body>
+    <script>
+         let runAgain = true;
+
+        while (runAgain) {
+            let age = prompt("Enter your age: ");
+            age = Number(age);
+
+            if (age < 0) {
+                console.error("You can't Drive! , As age cannot be Negative");
+            }
+            else if (age >= 18){
+                alert("You can Drive, Let's Have some milk!");
+            }
+            else {
+                alert("You can't Drive!!")
+            }
+            runAgain = confirm("Do you want to enter the age Again?");
+        }
+    </script>
+</body>
+</html>
