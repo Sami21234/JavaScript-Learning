@@ -1,0 +1,23 @@
+<!-- Question 2 -->
+
+<!-- Create a table without <tbody> . Now use "View page source " to check whether it has a <tbody> or not-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <table id="myTable">
+        <tr><td>Row 1</td></tr>
+        <tr><td>Row 2</td></tr>
+    </table>
+    <script>
+        // This logs the tables inner html (you will often see <tbody> even if not written)
+
+            console.log(document.getElementById("myTable").innerHTML);
+    </script>
+</body>
+</html>

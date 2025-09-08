@@ -1,0 +1,32 @@
+<!-- Question 4 -->
+
+<!-- Write a javascript code to change the background of the all <li> tags to cyan -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+
+<body>
+
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+
+    <script>
+        const cont = document.querySelectorAll("li");
+        cont.forEach(li => {
+            li.style.backgroundColor = "cyan"
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!-- Question 3 -->
+
+<!-- Create an element with 3 children. Now change the color first and last element to green -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+<body>
+    <div class="container">
+       <div class="box">box1</div>
+       <div class="box">box2</div>
+       <div class="box">box3</div>
+    </div>
+
+    <script>
+        const cont  = document.querySelector(".container");
+        cont.firstElementChild.style.color = "green";
+        cont.lastElementChild.style.color = "green";
+
+    </script>
+</body>
+</html>
