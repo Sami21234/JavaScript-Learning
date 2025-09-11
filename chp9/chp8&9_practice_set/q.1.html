@@ -1,0 +1,57 @@
+<!-- Write a program to show different alerts when different buttons are clicked -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <style>
+        .container {
+            color: black;
+        }
+
+        #btn1 {
+            background-color: yellow;
+            height: 40px;
+            width: 80px;
+        }
+
+        #btn2 {
+            background-color: yellow;
+            height: 40px;
+            width: 80px;
+        }
+
+        #btn3 {
+            background-color: yellow;
+            height: 40px;
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <button id="btn1">btn1</button>
+        <button id="btn2">btn2</button>
+        <button id="btn3">btn3</button>
+    </div>
+
+    <script>
+
+        document.getElementById("btn1").addEventListener("click", () => {
+            alert("Hey this is btn1 thanks for clicking")
+        })
+        document.getElementById("btn2").addEventListener("click", () => {
+            alert("Hey this is btn2 thanks for clicking and come again")
+        })
+        document.getElementById("btn3").addEventListener("click", () => {
+            alert("Hey this is btn3 thanks for clicking, Now go home")
+        })
+    </script>
+</body>
+
+</html>

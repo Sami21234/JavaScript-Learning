@@ -1,0 +1,68 @@
+<!-- Use Event Listners in the question 2 for this question -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <style>
+        #websiteName {
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        #websiteUrl {
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        button {
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        #bookmarkList {
+            margin-left: 10px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="websiteName" placeholder="Enter the website name">
+    <input type="url" id="websiteUrl" placeholder="Enter the website url">
+    <button id="Btn">Add Bookmarks</button>
+    <!-- <div id="bookmarkList"><strong>These are the Bookmarks</strong><br></div> -->
+
+    <script>
+        function saveBookmark() {
+
+            let name = document.getElementById("websiteName").value;
+            let url = document.getElementById("websiteUrl").value;
+            alert("button is clicked")
+            console.log("Name:", name);
+            console.log("url:", url);
+
+            let a = document.createElement("a");
+            a.href = url;
+            a.innerText = name;
+            a.target = "_blank";  // opens in a new tab
+            let br = document.createElement("br")
+            document.getElementById("bookmarkList").appendChild(a)
+            document.getElementById("bookmarkList").appendChild(br)
+
+            // Now Adding Eventlistner to this function
+
+            document.getElementById("Btn").addEventListener("click", saveBookmark);
+
+        }
+    </script>
+</body>
+
+
+
+</html>
+
+<!-- Pending -->

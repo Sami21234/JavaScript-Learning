@@ -1,0 +1,56 @@
+<!-- create a website which is capable of storing the bookmarks of your favourite websites using href -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <style>
+        #websiteName {
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        #websiteUrl {
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        button {
+            margin: 10px;
+            border: 2px solid black;
+        }
+        #bookmarkList{
+            margin-left: 10px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="websiteName" placeholder="Enter the website name">
+    <input type="url" id="websiteUrl" placeholder="Enter the website url">
+    <button onclick="saveBookmark()">Add Bookmark</button>
+
+    <div id="bookmarkList"><strong>These are the Bookmarks</strong><br></div>
+    <script>
+        function saveBookmark() {
+            let name = document.getElementById("websiteName").value;
+            let url = document.getElementById("websiteUrl").value;
+            console.log("Name:", name);
+            console.log("url:", url);
+
+            let a = document.createElement("a");
+            a.href = url;
+            a.innerText = name;
+            a.target = "_blank";  // opens in a new tab
+            let br = document.createElement("br")
+            document.getElementById("bookmarkList").appendChild(a)
+            document.getElementById("bookmarkList").appendChild(br)
+        }
+    </script>
+</body>
+
+</html>

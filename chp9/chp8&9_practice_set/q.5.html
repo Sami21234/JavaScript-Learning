@@ -1,0 +1,73 @@
+<!-- Bulb glowing effect using the javascript -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 60px;
+            font-family: sans-serif;
+            background-color: #7b7676;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .glow {
+            filter: drop-shadow(0 0 20px yellow);
+        }
+        /* Dynamically will use in the javascript */
+    </style>
+</head>
+
+<body>
+    <h2>Click the button to turn the bulb ON/OFF </h2>
+    <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Off Bulb">
+    <br><br>
+    <button onclick="toggleBulb()">Toggle Bulb</button>
+    <audio id="clickSound" src="https://www.soundjay.com/switch/switch-1.mp3"></audio>
+
+    <script>
+        let isOn = false; // This variable keeps track of whether the bulb is on or off
+
+        function toggleBulb() {
+
+            const bulb = document.getElementById("bulb");
+            if (isOn) {
+                bulb.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+                bulb.classList.remove("glow"); // Removes the glow when Off
+            } else {
+                bulb.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+                bulb.classList.add("glow"); // Add the glow when On
+            }
+            isOn = !isOn; // This toggles the state means( if it is false, it becomes true and vice versa), So next time the button is clicked , the opposite will happen (toggle on/off)
+
+            // Now adding the sound effect
+            document.getElementById("clickSound").play();
+
+        }
+    </script>
+</body>
+
+</html>
