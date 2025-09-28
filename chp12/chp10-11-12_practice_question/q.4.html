@@ -1,0 +1,71 @@
+<!-- Question 4 -->
+<!-- Write a program using promise.all() inside an async/await to await 3 promises. comapare its results with the case where we await these promises one by one-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+
+<body>
+    <script>
+        function loadScript(src) {
+            return new Promise((resolve, reject) => {
+                const script = document.createElement("script")
+                script.src = src
+                script.onload = () => {
+                    console.log(`Loaded: ${src}`);
+                    resolve(src)
+
+                };
+                script.onerror = () => {
+                    console.log(`Failed: ${src}`);
+                    reject(new Error("Failed to load " + src))
+
+                }
+                document.body.appendChild(script)
+            })
+
+        }
+        const scriptList = [
+            'q1.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js'
+        ];
+        // parallel loading with promise.all()
+        async function loadParallel() {
+            try {
+                console.log('Loading all scripts parallely');
+                await Promise.all(scriptList.map(loadScript));
+                alert("All scripts are loaded in parallel")
+            } catch (error) {
+                alert("Error in parallel loading: " + error.message);
+            }
+        }
+        // Sequential loading one-by-one
+        async function loadSequential() {
+            try {
+                console.log('Loading scripts one-by-one...');
+                for (let src of scriptList) {
+                    await loadScript(src);
+                }
+                alert("All scripts are loaded Sequentially!")
+
+
+            } catch (error) {
+                alert("Error in Sequential loading: " + error.message);
+            }
+
+        }
+
+        // Choose which one to run:
+        // loadParallel();   //Faster
+        loadSequential();  //Slower
+    </script>
+</body>
+
+</html>
+<!-- pending -->
