@@ -1,0 +1,34 @@
+<!-- Question 2 -->
+
+<!-- Write a method to add two complex numbers in the question 1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <script>
+        class complexNumber {
+            constructor(real,imaginary) {
+                this.real= real
+                this.imaginary= imaginary
+            }
+            add(num){
+                let newReal = this.real + num.real;
+                let newImaginary = this.imaginary + num.imaginary;
+                return new complexNumber(newReal,newImaginary);
+
+            }
+        }
+        const num1 = new complexNumber(3,4)
+        const num2 = new complexNumber(7,5)
+        const result = num1.add(num2); // returns the new complex number object with the result
+        console.log(result);
+        
+
+    </script>
+</body>
+</html>

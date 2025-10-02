@@ -1,0 +1,42 @@
+<!-- Question 3 and 4-->
+
+<!-- Create a class student from a class human. override a method & see changes and also check for its instances -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3 and 4</title>
+</head>
+<body>
+    <script>
+        class human {
+            constructor(name) {
+                this.name = name             
+            }
+            Hello(){
+                console.log(`Hello, I am ${this.name}`);
+            }
+        }
+        class student extends human{
+                constructor(name,grade) {
+                super(name);
+                // super.Hello()
+                this.grade = grade;           
+            }
+            Hello(){
+                console.log(`Hi, I am ${this.name} and I study in the grade ${this.grade}`);
+                
+            }
+        }
+        // Object creating
+        const stu1 = new student("Sami",12);
+        stu1.Hello()
+        console.log(stu1 instanceof student); // checking instances
+        console.log(stu1 instanceof human);
+        
+        
+    </script>
+</body>
+</html>

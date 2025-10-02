@@ -1,0 +1,53 @@
+<!-- Question 5 -->
+
+<!-- Use getter and setter to set and get the real and imaginary parts of the complex number  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+</head>
+<body>
+    <script>
+        class complexNumber {
+            constructor(real,imaginary) {
+                this._real = real;
+                this._imaginary = imaginary;
+            }
+            // Getter for real part
+            get real(){
+                return this._real
+            }
+            // Setter for real part
+            set real(value){
+            this._real = value
+            }
+            // Getter for imaginary part
+            get imaginary(){
+                return this._imaginary
+            }
+            // Setter for imaginary part
+            set imaginary(value){
+            this._imaginary = value
+            }
+
+        }
+        // Creating the object
+        const num = new complexNumber(3,4)
+        // Get values
+        console.log('Real: ', num.real);
+        console.log('Imaginary: ', num.imaginary);
+        // Set values
+        num.real = 10;
+        num.imaginary = 20;
+
+        // Get updated values 
+        console.log('Updated Real value: ', num.real);
+        console.log('Updated Imaginary value: ', num.imaginary);
+        
+        
+    </script>
+</body>
+</html>
