@@ -1,0 +1,27 @@
+<!-- Question 2 -->
+
+<!-- Write a javasript program to find the average of the numbers in an array usin the spread syntax -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+
+<body>
+    <script>
+        function avg(...numbers) {
+            const total = numbers.reduce((sum, num) =>  sum + num, 0 )
+            return total/numbers.length;
+        }
+
+        const nums = [8,8.5,9.38,9.2,9.4,9.2,9.4,9.3];
+        console.log("The average of the given array is: ",avg(...nums));
+        
+    </script>
+</body>
+
+</html>

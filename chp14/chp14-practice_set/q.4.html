@@ -1,0 +1,31 @@
+<!-- Question  4 -->
+
+<!-- Write a simple interest  calculator using the javascript -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+
+<body>
+    <script>
+        function simpleInterest(p, r, t) {
+            const calc = (p * r * t) / 100;
+            return calc
+        }
+
+        const p = 1000;  //Principal amount
+        const r = 5;     //Rate of interset
+        const t = 2;     //Time in years
+
+        const calc = simpleInterest(p,r,t);
+        console.log(`The Simple Interest is: ${calc}`);
+        
+    </script>
+</body>
+
+</html>
