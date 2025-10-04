@@ -1,0 +1,71 @@
+<!-- So, the challenge is to randomly color the boxes using DOM concepts -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random_Color_Generator</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            height: 48px;
+            width: 48px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+    </div>
+
+    <script>
+
+        // so to calculate the random number we use this formula  --->
+        
+        // a + r (b-a), where r is the random number between 0 to 1
+
+        // if, r=0 then it returns a
+        // if, r=1 then it returns b
+        // if, r=0 to 1 then returns the random number
+
+        // And we will replace the r to --> Math.random()
+
+        // So, the formula will be --> a + Math.random()*(b-a)
+        // And to convert the floating number into the integer part we use ..
+        // Math.ceil() function
+
+        console.log("Script is initializing...")
+
+        let boxes = document.querySelector(".container").children;
+
+        function randColor(){
+            let val1 = Math.ceil(0 + Math.random()* 255);
+            let val2 = Math.ceil(0 + Math.random()* 255);
+            let val3 = Math.ceil(0 + Math.random()* 255);
+            return `rgb(${val1},${val2},${val3})`
+        }
+            Array.from(boxes).forEach(e=>{
+                e.style.backgroundColor = randColor()
+                e.style.color = randColor()
+            })
+
+    </script>
+</body>
+</html>
